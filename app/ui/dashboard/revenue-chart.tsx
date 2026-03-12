@@ -39,7 +39,7 @@ export default async function RevenueChart() {
 
           {revenue.map((month) => (
             <div key={month.month} className="flex flex-col items-center gap-2">
-              
+
               <div className="relative flex w-full justify-center group">
 
                 <div className="absolute -top-9 hidden rounded bg-gray-800 
@@ -47,13 +47,14 @@ export default async function RevenueChart() {
                   {month.revenue.toLocaleString()}
                 </div>
 
-                <div
+              </div>
+
+              <div
                 className="w-full rounded-md bg-blue-300 hover:bg-blue-400"
                 style={{
                   height: `${(chartHeight / topLabel) * month.revenue}px`,
                 }}
               ></div>
-              </div>
 
               <p className="text-sm text-gray-400">{month.month}</p>
             </div>
@@ -65,6 +66,6 @@ export default async function RevenueChart() {
           <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
         </div>
       </div>
-      </div>
-      );
+    </div>
+  );
 }
