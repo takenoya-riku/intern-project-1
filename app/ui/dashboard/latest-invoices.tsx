@@ -32,7 +32,7 @@ export default async function LatestInvoices() {
                     <p className="truncate text-sm font-semibold md:text-base">
                       {invoice.name}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 hidden md:block">
                       {invoice.email}
                     </p>
                   </div>
