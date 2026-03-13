@@ -39,24 +39,19 @@ export default async function RevenueChart() {
 
           {revenue.map((month) => (
             <div key={month.month} className="flex flex-col items-center gap-2">
-
-              <div className="relative flex w-full justify-center group">
-
-                <div className="absolute -top-9 hidden rounded bg-gray-800 
-                px-2 py-1 text-white group-hover:block z-10">
+              <div className="group relative flex w-full items-end justify-center">
+                <div className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 hidden -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs text-white group-hover:block">
                   {month.revenue.toLocaleString()}
                 </div>
-
+                <div
+                  className="w-full rounded-md bg-blue-300 hover:bg-blue-400"
+                  style={{
+                    height: `${(chartHeight / topLabel) * month.revenue}px`,
+                  }}
+                ></div>
               </div>
 
-              <div
-                className="w-full rounded-md bg-blue-300 hover:bg-blue-400"
-                style={{
-                  height: `${(chartHeight / topLabel) * month.revenue}px`,
-                }}
-              ></div>
-
-                <p className="text-xs md:text-sm rotate-45 md:rotate-0 text-gray-400">{month.month}</p>
+              <p className="text-xs md:text-sm rotate-45 md:rotate-0 text-gray-400">{month.month}</p>
             </div>
           ))}
         </div>
