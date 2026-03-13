@@ -17,7 +17,7 @@ export default async function LatestInvoices() {
               <div
                 key={invoice.id}
                 className={clsx(
-                  'flex flex-row items-center justify-between py-4'
+                  'flex flex-row items-center justify-between py-4 hover:bg-gray-200'
                 )}
               >
                 <div className="flex items-center">
