@@ -43,7 +43,7 @@ export default async function RevenueChart() {
               <div className="relative flex w-full justify-center group">
 
                 <div className="absolute -top-9 hidden rounded bg-gray-800 
-                px-2 py-1 text-white group-hover:block">
+                px-2 py-1 text-white group-hover:block z-10">
                   {month.revenue.toLocaleString()}
                 </div>
 
